@@ -241,7 +241,7 @@ format-warn = <ramp> <label-warn>
 label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = #C37561
-ramp-0 = 
+ramp-0 = 
 ramp-foreground=#ff0
 
 [global/wm]
