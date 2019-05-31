@@ -1,0 +1,4 @@
+#!/bin/bash
+xrandr --newmode "1920x1080_120.00"  369.50  1920 2080 2288 2656  1080 1083 1088 1160 -hsync +vsync
+xrandr --addmode eDP-1 1920x1080_120.00
+xrandr --output eDP-1 --mode 1920x1080_120.00

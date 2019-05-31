@@ -40,18 +40,18 @@ line-color = #f00
 padding-left = 1
 padding-right = 1
 
-module-margin-left = 1
+module-margin-left =1
 module-margin-right = 1
 
-font-0 = Hack Nerd Font:pixelsize=16:antialias=true;2
-font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=16;3"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=16;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=16;3"
-font-4 = "NotoEmoji Nerd Font Mono:style=Book:size=16;3"
+font-0 = Hack Nerd Font:pixelsize=13.6:antialias=true;2
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=13.6;3"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=13.6;3"
+font-3 = "Font Awesome 5 Brands:pixelsize=13.6;3"
+font-4 = "NotoEmoji Nerd Font Mono:style=Book:size=13.6;3"
 
 modules-left = i3 weather
 modules-center =
-modules-right = backlight pulseaudio cpu temperature memory wlan filesystem xkeyboard battery date
+modules-right = backlight pulseaudio cpu temperature memory wlan filesystem battery date
 
 tray-position = right
 tray-padding = 2
@@ -67,30 +67,19 @@ cursor-scroll = ns-resize
 [module/weather]
 type = custom/script
 exec = /usr/bin/weather
-interval = 1800
-#format-underline = #6272a4
+interval = 300
+
 
 [module/backlight]
 type = internal/backlight
 card = intel_backlight
 format = <ramp> <label>
 label = %percentage%
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
-
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-format = <label-layout>
-format-prefix = " "
-format-prefix-foreground = #98B9B1
-label-layout = %layout%
-label-indicator-padding = 2
-label-indicator-margin = 1
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
 
 [module/filesystem]
 type = internal/fs

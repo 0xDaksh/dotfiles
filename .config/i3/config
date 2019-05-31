@@ -68,7 +68,9 @@ set $right semicolon
 #exec --no-startup-id xrandr --output DVI-I-0 --right-of HDMI-0 --auto
 #exec --no-startup-id xrandr --output DVI-1 --right-of DVI-0 --auto
 #exec --no-startup-id xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
-exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
+exec --no-startup-id xrandr --output eDP-1 --auto
+# for 120hz do the following:
+# exec --no-startup-id /usr/bin/setup-monitor
 
 
 # my current setup
