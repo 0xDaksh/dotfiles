@@ -1,4 +1,5 @@
 # Dotfiles
+
 These are my dotfiles for my i3-gaps + polybar config.
 
 __Wallpaper__: [The Elder Scrolls V: Skyrim Water Mod](https://wallhaven.cc/w/eyezdr)
