@@ -67,7 +67,7 @@ cursor-scroll = ns-resize
 [module/weather]
 type = custom/script
 exec = /usr/bin/weather
-interval = 300
+interval = 900
 
 
 [module/backlight]
