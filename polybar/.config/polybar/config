@@ -43,15 +43,15 @@ padding-right = 1
 module-margin-left =1
 module-margin-right = 1
 
-font-0 = Hack Nerd Font:pixelsize=13.6:antialias=true;2
-font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=13.6;3"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=13.6;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=13.6;3"
-font-4 = "NotoEmoji Nerd Font Mono:style=Book:size=13.6;3"
+font-0 = Hack Nerd Font:pixelsize=13:antialias=true;2
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=13;3"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=13;3"
+font-3 = "Font Awesome 5 Brands:pixelsize=13;3"
+font-4 = "NotoEmoji Nerd Font Mono:style=Book:size=13;3"
 
-modules-left = i3 weather
+modules-left = i3 gpmdp weather
 modules-center =
-modules-right = backlight pulseaudio cpu temperature memory wlan filesystem battery date
+modules-right = backlight pulseaudio cpu temperature memory battery date
 
 tray-position = right
 tray-padding = 2
@@ -64,9 +64,16 @@ wm-restack = i3
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-[module/weather]
+[module/gpmdp]
+format =  <label>
 type = custom/script
-exec = /usr/bin/weather
+exec = /usr/local/bin/current-playing daksh
+interval = 5
+
+[module/weather]
+format =  <label>
+type = custom/script
+exec = /usr/local/bin/weather
 interval = 900
 
 
@@ -98,10 +105,10 @@ label-unmounted = unmounted
 type = internal/i3
 index-sort = true
 wrapping-scroll = false
-ws-icon-0 = 1;1
-ws-icon-1 = 2;2
-ws-icon-2 = 3;3
-ws-icon-3 = 4;4
+ws-icon-0 = 1;爵
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
 ws-icon-4 = 5;5
 ws-icon-5 = 6;6
 ws-icon-6 = 7;7
@@ -111,8 +118,8 @@ ws-icon-9= 10;10
 ws-icon-default = 
 format = <label-state> <label-mode>
 label-focused = %icon%
-label-focused-foreground = #C37561
 label-focused-padding = 1
+label-focused-underline = #fba922
 label-unfocused = %icon%
 label-unfocused-padding = 1
 label-visible = %icon%
