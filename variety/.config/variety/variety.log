@@ -196,3 +196,8 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: '/home/daksh/.config/variety/wallpaper'
 INFO: 2019-05-31 19:40:23,173: update_indicator() 'Setting file info to: /home/daksh/Pictures/Wallpapers/nasa-89127-unsplash.jpg'
 ERROR: 2019-05-31 19:40:23,179: set_desktop_wallpaper() 'set_wallpaper script is missing or not executable: /home/daksh/.config/variety/scripts/set_wallpaper'
+INFO: 2019-05-31 20:01:32,896: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2019-05-31 20:01:32,897: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2019-05-31 20:01:32,908: update_indicator() 'Setting file info to: /home/daksh/Pictures/Wallpapers/nasa-89127-unsplash.jpg'
+WARNING: 2019-05-31 20:01:33,093: add_image() 'Could not create thumbnail for file /home/daksh/.config/variety/Downloaded/Desktoppr/1200_morning-with-coffee-in-yellowstone.jpg. File may be missing or invalid.'
+INFO: 2019-05-31 20:01:34,561: update_indicator() 'Setting file info to: /home/daksh/Pictures/Wallpapers/nasa-89127-unsplash.jpg'
