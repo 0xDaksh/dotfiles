@@ -32,8 +32,5 @@ alias ls "lsd"
 # add npm global to path
 set PATH ~/.npm-global/bin $PATH
 
-# neofetch
-neofetch | lolcat
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/daksh/google-cloud-sdk/path.fish.inc' ]; . '/home/daksh/google-cloud-sdk/path.fish.inc'; end
