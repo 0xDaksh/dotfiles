@@ -436,9 +436,6 @@ exec --no-startup-id dropbox start
 # volume
 exec --no-startup-id volumeicon
 
-#variety
-exec --no-startup-id variety
-
 # clipman
 exec --no-startup-id xfce4-clipman
 
@@ -604,8 +601,6 @@ for_window [class="Xfce4-taskmanager"] floating enable
 
 #for_window [instance="gimp"] floating disable
 for_window [instance="script-fu"] border normal
-for_window [instance="variety"] floating disable
-
 
 for_window [title="Copying"] floating enable
 for_window [title="Deleting"] floating enable
@@ -633,44 +628,6 @@ for_window [class="Termite"] focus
 for_window [class="Terminator"] focus
 for_window [class="Alacritty"] focus
 for_window [class="kitty"] focus
-
-
-
-
-#####################################################################################################################
-#################                          variety for your wallpapers                              #################
-#####################################################################################################################
-
-
-#Variety keybindings mod1 = ALT
-# trash wallpaper
-bindsym mod1+t exec --no-startup-id variety -t
-# next wallpaper
-bindsym mod1+n exec --no-startup-id variety -n
-bindsym mod1+Right exec --no-startup-id variety -n
-# previous wallpaper
-bindsym mod1+p exec --no-startup-id variety -p
-bindsym mod1+Left exec --no-startup-id variety -p
-# favorite wallpaper
-bindsym mod1+f exec --no-startup-id variety -f
-# pause wallpaper
-bindsym mod1+Up exec --no-startup-id variety --pause
-# resume wallpaper
-bindsym mod1+Down exec --no-startup-id variety --resume
-
-
-#####################################################################################################################
-#################                          variety with pywal for your wallpapers                   #################
-#####################################################################################################################
-
-# next wallpaper
-bindsym mod1+Shift+n exec --no-startup-id variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
-# previous wallpaper
-bindsym mod1+Shift+p exec --no-startup-id variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
-# trash wallpaper
-bindsym mod1+Shift+t exec --no-startup-id variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
-# Update Wallpaper
-bindsym mod1+Shift+u exec --no-startup-id wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)
 
 
 #####################################################################################################################
