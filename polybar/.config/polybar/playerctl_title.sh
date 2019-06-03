@@ -6,9 +6,11 @@ if [[ $? -eq 0 ]]; then
 fi
 
 if [[ $player_status = "Playing" ]]; then
-    echo "$metadata"
+    out="$metadata"
 elif [[ $player_status = "Paused" ]]; then
-    echo "$metadata"
+    out="$metadata"
 else
-    echo "" # Greyed out icon when stopped
+    out=""
 fi
+
+echo "$out" | awk -v len=36 '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print; }'

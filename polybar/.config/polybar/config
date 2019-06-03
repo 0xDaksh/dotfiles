@@ -100,7 +100,7 @@ scroll-down = playerctl next
 format =  <label>
 type = custom/script
 exec = /usr/local/bin/weather
-interval = 900
+interval = 1800
 
 
 [module/backlight]
