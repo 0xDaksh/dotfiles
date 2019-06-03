@@ -2,7 +2,7 @@
 
 player_status=$(playerctl status 2> /dev/null)
 if [[ $? -eq 0 ]]; then
-    metadata="$(playerctl metadata artist 2>/dev/null) - $(playerctl metadata title 2>/dev/null)"
+    metadata="$(playerctl metadata title 2>/dev/null) - $(playerctl metadata artist 2>/dev/null)"
 fi
 
 if [[ $player_status = "Playing" ]]; then
@@ -13,4 +13,4 @@ else
     out=""
 fi
 
-echo "$out" | awk -v len=36 '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print; }'
+echo "$out" | awk -v len=32 '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print; }'
