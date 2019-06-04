@@ -13,4 +13,4 @@ else
     out=""
 fi
 
-echo "$out" | awk -v len=32 '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print; }'
+echo "$out" | awk -v len=25 '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print; }'

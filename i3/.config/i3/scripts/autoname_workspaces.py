@@ -49,6 +49,9 @@ from util import *
 # xprop (https://linux.die.net/man/1/xprop). Run `xprop | grep WM_CLASS`
 # then click on the application you want to inspect.
 WINDOW_ICONS = {
+    'vlc': fa.icons['play'],
+    'Popcorn-Time': fa.icons['play'],
+    'telegram-desktop': fa.icons['telegram-plane'],
     'alacritty': fa.icons['terminal'],
     'atom': fa.icons['code'],
     'banshee': fa.icons['play'],

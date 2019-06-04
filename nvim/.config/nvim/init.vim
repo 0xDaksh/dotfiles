@@ -100,3 +100,6 @@ map <C-n> :NERDTreeToggle<CR>
 " Tabs
 map <C-k> :tabp<CR>
 map <C-l> :tabn<CR>
+
+" Get to end of the line
+imap <A-m> <END>
