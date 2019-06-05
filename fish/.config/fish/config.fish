@@ -26,11 +26,14 @@ alias gdf "git diff"
 alias gsu "git status"
 alias gpo "git push origin"
 alias kctl "kubectl"
-alias l "ls -l"
-alias ls "lsd"
+alias l "ls -l --icon never"
+alias ls "lsd --icon never"
 
 # add npm global to path
 set PATH ~/.npm-global/bin $PATH
+
+# add go bin to path
+set PATH ~/go/bin $PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/daksh/google-cloud-sdk/path.fish.inc' ]; . '/home/daksh/google-cloud-sdk/path.fish.inc'; end

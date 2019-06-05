@@ -49,6 +49,9 @@ Plug 'scrooloose/nerdcommenter'
 " GraphQL
 Plug 'jparise/vim-graphql'
 
+" Delve debugger
+Plug 'sebdah/vim-delve'
+
 call plug#end()
 
 " encoding

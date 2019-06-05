@@ -108,11 +108,11 @@ type = internal/backlight
 card = intel_backlight
 format = <ramp> <label>
 label = %percentage%
-ramp-0 = 
-ramp-1 = 
+ramp-4 = 
+ramp-3 = 
 ramp-2 = 
-ramp-3 = 
-ramp-4 = 
+ramp-1 = 
+ramp-0 = 
 
 [module/filesystem]
 type = internal/fs
