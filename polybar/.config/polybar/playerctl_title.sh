@@ -2,7 +2,7 @@
 
 player_status=$(playerctl status 2> /dev/null)
 if [[ $? -eq 0 ]]; then
-    metadata="$(playerctl metadata title 2>/dev/null) - $(playerctl metadata artist 2>/dev/null)"
+    metadata="$(playerctl metadata title 2>/dev/null)"
 fi
 
 if [[ $player_status = "Playing" ]]; then

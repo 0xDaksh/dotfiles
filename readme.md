@@ -5,7 +5,7 @@ These are my dotfiles for my i3-gaps + polybar config.
 - __Wallpaper__: [The Elder Scrolls V: Skyrim Water Mod](https://wallhaven.cc/w/eyezdr)
 - __Distro__: Arco 19.05
 - __WM__: i3-gaps
-- __Shell__: Fish with Oh-My-Fish with bob-the-fish theme
+- __Shell__: Fish with Oh-My-Fish
 - __Color Scheme__: Gruvbox
 - __Dotfiles__: https://github.com/DakshMiglani/dotfiles
 - __Terminal__: Kitty
@@ -17,6 +17,7 @@ These are my dotfiles for my i3-gaps + polybar config.
 - __Symlinking__: Use GNU Stow
 - __Editor__: Neovim
 - __Browser__: Brave
+- __Prompt__: [Powerline Go](https://github.com/justjanne/powerline-go)
 
 Screenshot of the final look:
 ![](final.png)

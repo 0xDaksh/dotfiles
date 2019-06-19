@@ -29,10 +29,11 @@ let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier','eslint'],
-\   'rust': ['rustfmt']
+\   'rust': ['rustfmt'],
+\   'go': ['goimports']
 \}
 let g:ale_fix_on_save = 1
-let g:ale_linters = {'markdown': ['remark'], 'sh': ['language_server'], 'java': ['javalsp'], 'javascript': ['eslint']}
+let g:ale_linters = {'markdown': ['remark'], 'sh': ['language_server'], 'java': ['javalsp'], 'javascript': ['eslint'], 'go': ['gometalinter', 'gofmt']}
 
 " Close Tag
 Plug 'alvan/vim-closetag'
@@ -51,6 +52,10 @@ Plug 'jparise/vim-graphql'
 
 " Delve debugger
 Plug 'sebdah/vim-delve'
+
+" Vue
+Plug 'posva/vim-vue'
+let g:vue_disable_pre_processors=1
 
 call plug#end()
 

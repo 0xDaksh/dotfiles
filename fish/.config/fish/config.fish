@@ -2,6 +2,11 @@
 function fish_greeting
 end
 
+# Prompt
+function fish_prompt
+  powerline-go -error $status -shell bare
+end
+
 # rust
 set PATH $HOME/.cargo/bin $PATH
 
@@ -34,6 +39,9 @@ set PATH ~/.npm-global/bin $PATH
 
 # add go bin to path
 set PATH ~/go/bin $PATH
+
+# set go mod
+set GO111MODULE auto
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/daksh/google-cloud-sdk/path.fish.inc' ]; . '/home/daksh/google-cloud-sdk/path.fish.inc'; end
