@@ -6,9 +6,6 @@
 
 call plug#begin()
 
-" Colorscheme
-Plug 'morhetz/gruvbox'
-
 " Powerline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -73,11 +70,12 @@ syntax on
 set cursorline
 
 " ColorScheme
-if (has("termguicolors"))
- set termguicolors
-endif
+"urxvt issues, disable termguicolors
+"if (has("termguicolors"))
+ "set termguicolors
+"endif
+
 set background=dark
-colorscheme gruvbox
 
 " Clipboard
 set clipboard=unnamedplus
@@ -92,7 +90,7 @@ set expandtab
 set number
 set relativenumber
 
-" TMUX fix
+"" TMUX fix
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
   " render properly when inside 256-color tmux and GNU screen.

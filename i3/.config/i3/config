@@ -35,7 +35,6 @@
 set $mod Mod4
 
 
-
 #####################################################################################################################
 #################                          Define the movements keys - variables                    #################
 #####################################################################################################################
@@ -74,34 +73,6 @@ exec --no-startup-id xrandr --output eDP-1 --auto
 
 
 # my current setup
-
-#set $firstMonitor DP3
-#set $secondMonitor LVDS1
-
-#set $firstMonitor DVI-I-0
-#set $secondMonitor HDMI-0
-
-
-#set $firstMonitor DVI-0
-#set $secondMonitor DVI-1
-
-#set $firstMonitor DVI-I-1
-#set $secondMonitor DVI-D-1
-
-set $firstMonitor HDMI1
-set $secondMonitor HDMI2
-
-workspace 1 output $firstMonitor
-workspace 2 output $firstMonitor
-workspace 3 output $firstMonitor
-workspace 4 output $firstMonitor
-workspace 5 output $firstMonitor
-workspace 6 output $secondMonitor
-workspace 7 output $secondMonitor
-workspace 8 output $secondMonitor
-workspace 9 output $secondMonitor
-workspace 10 output $secondMonitor
-
 # switch to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
@@ -126,17 +97,12 @@ bindsym $mod+Shift+8 move container to workspace number 8; workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9; workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10; workspace number 10
 
-
-
 #####################################################################################################################
 #################                          3 menu's in arcolinux                                     #################
 #####################################################################################################################
 
 # start dmenu
 bindsym $mod+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
-
-# start xfce-appfinder
-bindsym mod1+F3 exec --no-startup-id xfce4-appfinder
 
 #####################################################################################################################
 #################                          how to exit, logoff, suspend, ...                        #################
@@ -329,10 +295,10 @@ mode "resize" {
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # choose your font
-font pango:Noto Mono Regular 13
+font pango:Iosevka Nerd Font 13
 
-
-
+#Polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 
 #####################################################################################################################
@@ -439,13 +405,10 @@ exec --no-startup-id volumeicon
 # clipman
 exec --no-startup-id xfce4-clipman
 
-#Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-
 # Nitrogen
 exec --no-startup-id nitrogen --restore
 
-# Name workspaces
+# Rename workspaces
 exec_always --no-startup-id ~/.config/i3/scripts/autoname_workspaces.py --norenumber_workspaces &
 
 #####################################################################################################################
@@ -465,20 +428,17 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 #not workspace related
 
 # terminal
-bindsym $mod+Return exec --no-startup-id kitty;focus
-bindsym $mod+KP_Enter exec --no-startup-id kitty;focus
-bindsym control+mod1+t exec --no-startup-id kitty; focus
-bindsym control+mod1+Return exec --no-startup-id kitty; focus
-bindsym control+mod1+KP_Enter exec --no-startup-id kitty; focus
+bindsym $mod+Return exec --no-startup-id urxvt-256color;focus
+bindsym $mod+KP_Enter exec --no-startup-id urxvt-256color;focus
+bindsym control+mod1+t exec --no-startup-id urxvt-256color; focus
+bindsym control+mod1+Return exec --no-startup-id urxvt-256color; focus
+bindsym control+mod1+KP_Enter exec --no-startup-id urxvt-256color; focus
 
 #System monitor
 bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
 
 #settings
 bindsym control+mod1+m exec --no-startup-id xfce4-settings-manager
-
-#catfish
-bindsym control+mod1+c exec --no-startup-id catfish;focus
 
 #slimlock
 #arcolinux conflict
@@ -496,64 +456,17 @@ bindsym control+mod1+c exec --no-startup-id catfish;focus
 #arcolinux conflict
 bindsym control+mod1+u exec --no-startup-id pavucontrol
 
-# start xfce-appfinder
-#arcolinux does not seem to work
-bindsym control+mod1+a exec --no-startup-id xfce4-appfinder
-
-#pamac-manager
-bindsym control+mod1+p exec --no-startup-id pamac-manager
-
 #xkill
 bindsym --release $mod+Escape exec xkill
 
 #workspace related
 
-#workspace 1 related
-bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;focus
-#qwerty/azerty conflict with w
-bindsym $mod+w exec --no-startup-id exo-open --launch webbrowser;focus
-bindsym control+mod1+f exec --no-startup-id firefox;focus
-bindsym control+mod1+v exec --no-startup-id vivaldi-stable;focus
-bindsym control+mod1+g exec --no-startup-id chromium;focus
-
-#workspace 2 related
-#bindsym $mod+F2 exec --no-startup-id geany;focus
-bindsym $mod+F2 exec --no-startup-id atom;focus
-bindsym control+mod1+w exec --no-startup-id geany;focus
-
-#workspace 3 related
-bindsym $mod+F3 exec --no-startup-id inkscape;focus
-
-#workspace 4 related
-bindsym $mod+F4 exec --no-startup-id gimp;focus
-
-#workspace 5 related
-bindsym $mod+F5 exec --no-startup-id meld;focus
-bindsym control+mod1+i exec --no-startup-id nitrogen;focus
-
-#workspace 6 related
-bindsym $mod+F6 exec --no-startup-id vlc;focus
-
-#workspace 7 related
-bindsym $mod+F7 exec --no-startup-id virtualbox;focus
-
-#workspace 8 related
-for_window [class="Thunar"] focus
-bindsym $mod+F8 exec --no-startup-id thunar;focus
+bindsym $mod+F1 exec --no-startup-id exo-open --launch google-chrome;focus
+bindsym control+mod1+w exec --no-startup-id chromium;focus
 bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
 bindsym $mod+Shift+KP_Enter exec --no-startup-id thunar;focus
-bindsym control+mod1+b exec --no-startup-id thunar;focus
 
-#workspace 9 related
-bindsym $mod+F9 exec --no-startup-id evolution;focus
-bindsym control+mod1+e exec --no-startup-id evolution;focus
-#bindsym $mod+F9 exec --no-startup-id geary;focus
-#bindsym control+mod1+e exec --no-startup-id geary;focus
-
-#workspace 10 related
-bindsym $mod+F10 exec --no-startup-id spotify;focus
-bindsym control+mod1+s exec --no-startup-id spotify;focus
-
+for_window [class="Thunar"] focus
 
 
 
@@ -561,15 +474,8 @@ bindsym control+mod1+s exec --no-startup-id spotify;focus
 #################                          screenshots                                              #################
 #####################################################################################################################
 
-
-bindsym Print exec --no-startup-id scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
-bindsym Control+Print exec --no-startup-id xfce4-screenshooter
-bindsym Control+Shift+Print exec --no-startup-id gnome-screenshot -i
-#bindsym shift+Print exec --no-startup-id shutter
-
-
-
-
+bindsym Print exec --no-startup-id scrot 'i3-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+bindsym Control+Print exec --no-startup-id deepin-screenshot
 
 #####################################################################################################################
 #################                          floating or tiled                                        #################
@@ -633,7 +539,7 @@ for_window [class="Gnome-terminal"] focus
 for_window [class="Termite"] focus
 for_window [class="Terminator"] focus
 for_window [class="Alacritty"] focus
-for_window [class="kitty"] focus
+for_window [class="urxvt-256color"] focus
 
 
 #####################################################################################################################
@@ -713,8 +619,8 @@ for_window [class="^.*"] border pixel 1
 gaps inner 6
 gaps outer 6
 
-bindsym $mod+Shift+d    gaps inner current set 6; gaps outer current set 6;
-bindsym $mod+Shift+s		gaps inner current set 0; gaps outer current set 0;
+bindsym $mod+Shift+s    gaps inner current set 6; gaps outer current set 6;
+bindsym $mod+Shift+d		gaps inner current set 0; gaps outer current set 0;
 #smart_gaps on
 #smart_borders on
 
@@ -782,7 +688,7 @@ mode "$mode_gaps_outer" {
 #####################################################################################################################
 
 #if you want transparency on non-focused windows, ...
-exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
+exec --no-startup-id compton --config ~/.config/i3/compton.conf
 
 
 #####################################################################################################################
@@ -790,11 +696,11 @@ exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
 #####################################################################################################################
 
 # screen brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+bindsym XF86MonBrightnessUp exec --no-startup-id backlight  +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id backlight -5%
 
 # touchpad tap
-exec_always --no-startup-id xinput set-prop 13 270 1
+exec --no-startup-id xinput set-prop 13 270 1
 
 #####################################################################################################################
 #####################################################################################################################
