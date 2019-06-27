@@ -91,7 +91,7 @@ click-left = playerctl next
 
 [module/player_title]
 type = custom/script
-interval = 1
+interval = 5
 exec = ~/.config/polybar/playerctl_title.sh
 scroll-up = playerctl previous
 scroll-down = playerctl next
@@ -131,17 +131,6 @@ label-unmounted = unmounted
 type = internal/i3
 index-sort = true
 wrapping-scroll = false
-;ws-icon-0 = 1;爵
-;ws-icon-1 = 2;
-;ws-icon-2 = 3;
-;ws-icon-3 = 4;
-;ws-icon-4 = 5;磊
-;ws-icon-5 = 6;6
-;ws-icon-6 = 7;7
-;ws-icon-7 = 8;8
-;ws-icon-8 = 9;9
-;ws-icon-9= 10;10
-;;ws-icon-default = 
 format = <label-state> <label-mode>
 label-focused = %name%
 label-focused-padding = 1
@@ -156,14 +145,14 @@ label-urgent-padding = 1
 
 [module/cpu]
 type = internal/cpu
-interval = 1
+interval = 20
 format-prefix = "龍 "
 format-prefix-foreground = #A0A57E
 label = %percentage%%
 
 [module/memory]
 type = internal/memory
-interval = 1
+interval = 20
 format-prefix = " "
 format-prefix-foreground = #A0A57E
 label = %percentage_used%%
@@ -171,7 +160,7 @@ label = %percentage_used%%
 [module/wlan]
 type = internal/network
 interface = wlo1
-interval = 3.0
+interval = 10
 format-connected = <label-connected>
 format-connected-prefix = " "
 format-connected-prefix-foreground = #C37561
@@ -180,7 +169,7 @@ label-connected = %essid%
 [module/eth]
 type = internal/network
 interface = enp0s25
-interval = 3.0
+interval = 10
 format-connected = <label-connected>
 format-connected-prefix = " "
 format-connected-prefix-foreground = #C37561
@@ -188,7 +177,7 @@ label-connected = %ifname%
 
 [module/date]
 type = internal/date
-interval = 1
+interval = 25
 date = %d/%m/%y
 time = %I:%M
 label =  %date% %time%
@@ -253,6 +242,7 @@ animation-discharging-9 = 
 animation-discharging-10 = 
 animation-discharging-foreground = #D1A375
 animation-discharging-framerate = 500
+interval=30
 
 [module/temperature]
 type = internal/temperature
@@ -265,6 +255,7 @@ label-warn = %temperature-c%
 label-warn-foreground = #C37561
 ramp-0 = 
 ramp-foreground=#ff0
+interval=10
 
 [global/wm]
 margin-top = 5

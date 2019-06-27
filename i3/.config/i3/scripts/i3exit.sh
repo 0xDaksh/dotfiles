@@ -3,7 +3,7 @@
 
 case "$1" in
     lock)
-        slimlock
+        /usr/bin/blurlock 
         ;;
     logout)
         i3-msg exit
