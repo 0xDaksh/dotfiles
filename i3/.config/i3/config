@@ -428,11 +428,11 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 #not workspace related
 
 # terminal
-bindsym $mod+Return exec --no-startup-id urxvt-256color;focus
-bindsym $mod+KP_Enter exec --no-startup-id urxvt-256color;focus
-bindsym control+mod1+t exec --no-startup-id urxvt-256color; focus
-bindsym control+mod1+Return exec --no-startup-id urxvt-256color; focus
-bindsym control+mod1+KP_Enter exec --no-startup-id urxvt-256color; focus
+bindsym $mod+Return exec --no-startup-id kitty;focus
+bindsym $mod+KP_Enter exec --no-startup-id kitty;focus
+bindsym control+mod1+t exec --no-startup-id kitty; focus
+bindsym control+mod1+Return exec --no-startup-id kitty; focus
+bindsym control+mod1+KP_Enter exec --no-startup-id kitty; focus
 
 #System monitor
 bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
@@ -539,7 +539,7 @@ for_window [class="Gnome-terminal"] focus
 for_window [class="Termite"] focus
 for_window [class="Terminator"] focus
 for_window [class="Alacritty"] focus
-for_window [class="urxvt-256color"] focus
+for_window [class="kitty"] focus
 
 
 #####################################################################################################################
@@ -696,11 +696,11 @@ exec --no-startup-id compton --config ~/.config/i3/compton.conf
 #####################################################################################################################
 
 # screen brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id backlight  +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id backlight -5%
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
 # touchpad tap
-exec --no-startup-id xinput set-prop 13 270 1
+exec --no-startup-id xinput set-prop 13 303 1
 
 #####################################################################################################################
 #####################################################################################################################

@@ -3,8 +3,9 @@
 " Author: Daksh Miglani <hello@dak.sh> https://dak.sh
 """
 
-
 call plug#begin()
+" Theme
+Plug 'flazz/vim-colorschemes'
 
 " Powerline
 Plug 'vim-airline/vim-airline'
@@ -69,11 +70,16 @@ syntax on
 " Cursor Line
 set cursorline
 
+" Whitespace and Tab charachters
+set list
+set listchars+=space:.
+
 " ColorScheme
 "urxvt issues, disable termguicolors
 "if (has("termguicolors"))
  "set termguicolors
 "endif
+colorscheme badwolf
 
 set background=dark
 
