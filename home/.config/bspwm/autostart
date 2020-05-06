@@ -1,0 +1,12 @@
+#!/bin/sh
+
+sxhkd -c $HOME/.config/bspwm/sxhkdrc &
+xsetroot -cursor_name Pop &
+feh --randomize --bg-fill /usr/share/backgrounds/pop &
+xinput set-prop "ELAN1200:00 04F3:30BA Touchpad" "libinput Tapping Enabled" 1 &
+nm-applet &
+xfce4-clipman &
+$HOME/.config/polybar/launch.sh &
+/usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd &
+
+# dropbox start &
