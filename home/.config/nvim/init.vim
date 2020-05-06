@@ -23,7 +23,7 @@ Plug 'sebdah/vim-delve'
 Plug 'justinmk/vim-sneak'
 call plug#end()
 
-" Keybindings
+" Config
 source $HOME/.config/nvim/modules/config.vim
 
 " Colors
@@ -47,13 +47,4 @@ source $HOME/.config/nvim/modules/tex.vim
 " Go
 source $HOME/.config/nvim/modules/go.vim
 
-" CPP Build command
-fun! BuildCPP()
-
-  nmap <C-x>s :%s/std::/<CR>
-  nnoremap <C-x>c :!g++ -std=c++17 -O2 % -Wall -g -o out <CR>:split<CR>:term<CR>i ./out
-
-endfun
-
-autocmd FileType cpp,cc,cxx,h,hpp :call BuildCPP()
 

@@ -90,3 +90,14 @@ nnoremap <leader><leader> <c-^>
 
 " Tags
 nmap <leader>l :TagbarToggle<CR>
+
+
+" CPP Build command
+fun! BuildCPP()
+
+  nmap <C-x>s :%s/std::/<CR>
+  nnoremap <C-x>c :!g++ -std=c++17 -O2 % -Wall -g -o out <CR>:split<CR>:term<CR>i ./out
+
+endfun
+
+autocmd FileType cpp,cc,cxx,h,hpp :call BuildCPP()
