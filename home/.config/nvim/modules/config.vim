@@ -88,9 +88,9 @@ imap <C-a> <END>
 nmap <leader>w :w<CR>
 nnoremap <leader><leader> <c-^>
 
-" Tags
-nmap <leader>l :TagbarToggle<CR>
 
+" Tags
+nmap <leader>l :Vista!!<CR>
 
 " CPP Build command
 fun! BuildCPP()

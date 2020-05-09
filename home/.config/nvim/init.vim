@@ -9,6 +9,10 @@ Plug 'airblade/vim-rooter'
 Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'mhinz/vim-startify'
+Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
 Plug 'yggdroot/indentline'
@@ -22,21 +26,14 @@ Plug 'honza/vim-snippets'
 Plug 'sebdah/vim-delve'
 Plug 'justinmk/vim-sneak'
 call plug#end()
-
 " Config
 source $HOME/.config/nvim/modules/config.vim
-
-" Colors
-source $HOME/.config/nvim/modules/theming.vim
 
 " sneak
 source $HOME/.config/nvim/modules/sneak.vim
 
-" Tagbar
+" tagbar
 source $HOME/.config/nvim/modules/tagbar.vim
-
-" FZF
-source $HOME/.config/nvim/modules/fzf.vim
 
 " COC
 source $HOME/.config/nvim/modules/coc.vim
@@ -47,4 +44,8 @@ source $HOME/.config/nvim/modules/tex.vim
 " Go
 source $HOME/.config/nvim/modules/go.vim
 
+" FZF
+source $HOME/.config/nvim/modules/fzf.vim
 
+" Colors
+source $HOME/.config/nvim/modules/theming.vim
