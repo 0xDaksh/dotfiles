@@ -29,3 +29,7 @@ ccc() {
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+function zle-line-init () { echoti smkx }
+function zle-line-finish () { echoti rmkx }
+zle -N zle-line-init
+zle -N zle-line-finish
