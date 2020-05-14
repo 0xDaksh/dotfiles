@@ -124,5 +124,5 @@ super + {Left,Down,Up,Right}
 XF86MonBrightness{Up,Down}
 	backlight {+,-}5%
 
-F12
+ctrl + shift + s 
   deepin-screenshot

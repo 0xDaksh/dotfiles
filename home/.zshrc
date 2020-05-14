@@ -28,7 +28,10 @@ ccc() {
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# homeshick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+# st fixes
 function zle-line-init () { echoti smkx }
 function zle-line-finish () { echoti rmkx }
 zle -N zle-line-init
