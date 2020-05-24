@@ -1,11 +1,10 @@
 " colors
 set background=dark
-let g:gruvbox_material_background = 'medium'
-colorscheme gruvbox-material 
+colorscheme onedark 
 
 " lightline
 let g:lightline = {
-      \'colorscheme' : 'gruvbox_material', 
+      \'colorscheme' : 'onedark', 
       \'enable': 
         \{
           \'tabline': 1,

@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'sainnhe/gruvbox-material'
+Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'majutsushi/tagbar'
@@ -9,15 +9,16 @@ Plug 'airblade/vim-rooter'
 Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
-Plug 'norcalli/nvim-colorizer.lua'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'mhinz/vim-startify'
 Plug 'majutsushi/tagbar'
-Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
 Plug 'yggdroot/indentline'
 Plug 'matze/vim-move'
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'lervag/vimtex'
@@ -46,6 +47,9 @@ source $HOME/.config/nvim/modules/go.vim
 
 " FZF
 source $HOME/.config/nvim/modules/fzf.vim
+
+" Git
+source $HOME/.config/nvim/modules/signify.vim
 
 " Colors
 source $HOME/.config/nvim/modules/theming.vim

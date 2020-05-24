@@ -125,4 +125,4 @@ XF86MonBrightness{Up,Down}
 	backlight {+,-}5%
 
 ctrl + shift + s 
-  deepin-screenshot
+  flameshot gui
