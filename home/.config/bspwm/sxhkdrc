@@ -124,5 +124,10 @@ super + {Left,Down,Up,Right}
 XF86MonBrightness{Up,Down}
 	backlight {+,-}5%
 
+# screenshot util
 ctrl + shift + s 
   flameshot gui
+
+# web browser
+super + w
+  chromium

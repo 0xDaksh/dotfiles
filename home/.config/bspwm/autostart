@@ -1,12 +1,12 @@
 #!/bin/sh
 
+$HOME/.config/polybar/launch.sh &
 sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 xsetroot -cursor_name left_ptr &
 feh --randomize --bg-fill /usr/share/backgrounds/arcolinux &
 xinput set-prop "ELAN1200:00 04F3:30BA Touchpad" "libinput Tapping Enabled" 1 &
 nm-applet &
 xfce4-clipman &
-$HOME/.config/polybar/launch.sh &
 nm-applet &
 numlockx on &
 blueberry-tray &
