@@ -1,0 +1,14 @@
+#!/bin/sh
+
+xinput set-prop "ELAN1200:00 04F3:30BA Touchpad" "libinput Tapping Enabled" 1 &
+nm-applet &
+xfce4-clipman &
+nm-applet &
+numlockx on &
+blueberry-tray &
+# xfce4-power-manager &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
+/home/daksh/.config/polybar/launch.sh &
+nitrogen --restore &
+# dropbox start &

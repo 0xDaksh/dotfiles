@@ -19,10 +19,12 @@ export EDITOR="nvim"
 alias vi="nvim"
 alias nv="nvim"
 
+# c++ compilation
 ccc() {
 	g++ -std=c++17 -O2 -Wall $1 -o $2
 }
 
+# codi setup
 codi() {
   local syntax="${1:-python}"
   shift
