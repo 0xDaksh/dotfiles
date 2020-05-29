@@ -26,6 +26,7 @@ Plug 'jceb/vim-orgmode'
 Plug 'honza/vim-snippets'
 Plug 'sebdah/vim-delve'
 Plug 'justinmk/vim-sneak'
+Plug 'metakirby5/codi.vim'
 call plug#end()
 " Config
 source $HOME/.config/nvim/modules/config.vim
