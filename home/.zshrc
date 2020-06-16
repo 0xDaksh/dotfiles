@@ -13,7 +13,7 @@ plugins=(git vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 export GOPATH=/home/daksh/go
-export PATH=~/.npm-global/bin:$GOPATH/bin:$PATH
+export PATH=~/.npm-global/bin:$GOPATH/bin:~/.local/bin:$PATH
 export EDITOR="nvim"
 
 alias vi="nvim"

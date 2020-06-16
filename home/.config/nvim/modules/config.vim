@@ -1,6 +1,7 @@
 set noerrorbells
 set smartcase
 set colorcolumn=90
+set guicursor=
 
 " Indentation
 filetype plugin indent on
@@ -14,11 +15,9 @@ set number
 set relativenumber
 
 " Code Folding
-set foldmethod=indent  
-set nofoldenable
-set foldlevel=2
-set foldcolumn=2
+set foldmethod=manual  
 
+" undo dir
 if !isdirectory($HOME."/.nvim/undo-dir")
   call mkdir($HOME."/.nvim/undo-dir", "", 0700)
 endif

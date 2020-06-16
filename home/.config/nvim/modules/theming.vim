@@ -1,10 +1,10 @@
 " colors
 set background=dark
-colorscheme onedark 
+colorscheme Atelier_DuneDark 
 
 " lightline
 let g:lightline = {
-      \'colorscheme' : 'onedark', 
+      \'colorscheme' : 'Atelier_Estuary', 
       \'enable': 
         \{
           \'tabline': 1,

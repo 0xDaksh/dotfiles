@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'joshdick/onedark.vim'
+Plug 'atelierbram/vim-colors_atelier-schemes'
 Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'majutsushi/tagbar'
