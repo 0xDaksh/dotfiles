@@ -1,10 +1,11 @@
 " colors
 set background=dark
-colorscheme Atelier_DuneDark 
+colorscheme gruvbox 
+let g:gruvbox_italic=1
 
 " lightline
 let g:lightline = {
-      \'colorscheme' : 'Atelier_Estuary', 
+      \'colorscheme' : 'gruvbox', 
       \'enable': 
         \{
           \'tabline': 1,

@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'atelierbram/vim-colors_atelier-schemes'
+Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'majutsushi/tagbar'
@@ -19,7 +19,7 @@ Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
-Plug 'tpope/vim-fugitive'
+Plug 'voldikss/vim-floaterm'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'lervag/vimtex'
 Plug 'jceb/vim-orgmode'
@@ -27,6 +27,7 @@ Plug 'honza/vim-snippets'
 Plug 'sebdah/vim-delve'
 Plug 'justinmk/vim-sneak'
 Plug 'metakirby5/codi.vim'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 " Config
 source $HOME/.config/nvim/modules/config.vim

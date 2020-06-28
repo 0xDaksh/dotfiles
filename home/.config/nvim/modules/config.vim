@@ -1,7 +1,6 @@
 set noerrorbells
 set smartcase
 set colorcolumn=90
-set guicursor=
 
 " Indentation
 filetype plugin indent on

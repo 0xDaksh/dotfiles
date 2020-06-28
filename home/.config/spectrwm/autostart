@@ -8,7 +8,9 @@ nm-applet &
 numlockx on &
 blueberry-tray &
 # xfce4-power-manager &
+/usr/bin/lxqt-powermanagement &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 nitrogen --restore &
-# dropbox start &
+optimus-manager-qt &
+dropbox start &
