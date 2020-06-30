@@ -1,6 +1,6 @@
 call plug#begin()
-Plug 'morhetz/gruvbox'
-Plug 'itchyny/lightline.vim'
+Plug 'sainnhe/gruvbox-material'
+Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
