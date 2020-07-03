@@ -1,4 +1,5 @@
 set noerrorbells
+set nowrap
 set smartcase
 set colorcolumn=90
 
