@@ -1,3 +1,0 @@
-#!/bin/bash
-
-st sh -c "sudo pacman -Syu"
