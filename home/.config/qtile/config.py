@@ -203,10 +203,14 @@ def init_widgets_list():
                    padding=6,
                    foreground=colors[2],
                    background=colors[0]),
-        widget.Image(filename="~/.config/qtile/icons/haskell.png",
-                     mouse_callbacks={
-                         'Button1': lambda qtile: qtile.cmd_spawn('dmenu_run')
-                     }),
+        widget.Image(
+            filename="~/.config/qtile/icons/haskell.png",
+            mouse_callbacks={
+                'Button1':
+                lambda qtile: qtile.cmd_spawn(
+                    'rofi -modi run,drun -show drun -location 7 -xoffset 5 -yoffset -450 -line-padding 4 -columns 1 -width 20 -lines 10 -padding 25 -hide-scrollbar -show-icons -drun-icon-theme'
+                )
+            }),
         widget.Sep(linewidth=0,
                    padding=10,
                    foreground=colors[2],
@@ -272,7 +276,9 @@ def init_widgets_list():
                        foreground=colors[2],
                        background=colors[5],
                        padding=0),
-        widget.Volume(foreground=colors[2], background=colors[5], padding=5),
+        widget.PulseVolume(foreground=colors[2],
+                           background=colors[5],
+                           padding=5),
         widget.CurrentLayoutIcon(
             custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
             foreground=colors[0],

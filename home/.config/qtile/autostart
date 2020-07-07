@@ -8,4 +8,5 @@ numlockx on &
 nitrogen --restore &
 # nm-applet &
 # blueberry-tray &
+picom --config /home/daksh/.config/qtile/picom.conf &
 dropbox start &
