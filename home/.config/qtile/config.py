@@ -10,16 +10,13 @@ from typing import List  # noqa: F401
 
 ##### DEFINING SOME VARIABLES #####
 mod = "mod4"  # Sets mod key to SUPER/WINDOWS
-myTerm = "st"  # My terminal of choice
+myTerm = "/home/daksh/.config/qtile/launch_terminal"  # My terminal of choice
 myConfig = "/home/daksh/.config/qtile/config.py"  # The Qtile config file location
 
 ##### KEYBINDINGS #####
 keys = [
     # The essentials
     Key([mod], "Return", lazy.spawn(myTerm), desc='Launches My Terminal'),
-    Key([mod],
-        "d",
-        lazy.spawn("dmenu_run  -p 'Run: '"),
         desc='Dmenu Run Launcher'),
     Key([mod], "space", lazy.next_layout(), desc='Toggle through layouts'),
     Key([mod], "q", lazy.window.kill(), desc='Kill active window'),
@@ -300,7 +297,7 @@ def init_widgets_list():
     return widgets_list
 
 
-# SCREENS ##### (TRIPLE MONITOR SETUP)
+# SCREENS #####
 
 
 def init_screens():

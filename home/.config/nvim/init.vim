@@ -1,39 +1,45 @@
 call plug#begin()
 Plug 'sainnhe/gruvbox-material'
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
-Plug 'fatih/vim-go'
+Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'mhinz/vim-startify'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-sleuth'
+Plug 'mattn/emmet-vim'
 Plug 'yggdroot/indentline'
 Plug 'matze/vim-move'
 Plug 'mhinz/vim-signify'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'lervag/vimtex'
 Plug 'jceb/vim-orgmode'
 Plug 'honza/vim-snippets'
-Plug 'sebdah/vim-delve'
-Plug 'justinmk/vim-sneak'
-Plug 'metakirby5/codi.vim'
+Plug 'easymotion/vim-easymotion'
+" Plug 'metakirby5/codi.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'mbbill/undotree'
+Plug 'sheerun/vim-polyglot'
+Plug 'puremourning/vimspector'
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'liuchengxu/vim-which-key'
+Plug 'moll/vim-bbye'
 call plug#end()
 " Config
 source $HOME/.config/nvim/modules/config.vim
-
-" sneak
-source $HOME/.config/nvim/modules/sneak.vim
 
 " tagbar
 source $HOME/.config/nvim/modules/tagbar.vim

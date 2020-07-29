@@ -71,24 +71,19 @@ noremap <Right> <Nop>
 imap jj <Esc>
 
 " Buffer and tab Management
-nmap <silent> <leader>bn :bn<CR>
-nmap <silent> <leader>bp :bp<CR>
-nmap <silent> <leader>bd :bd<CR>
-nmap <silent> <leader>mn :tabn<CR>
+nmap <silent> ]b :bn<CR>
+nmap <silent> [b :bp<CR>
+nmap <silent> <leader>bd :Bdelete<CR>
+nmap <silent> [t :tabn<CR>
+nmap <silent> ]t :tabp<CR>
 nmap <silent> <leader>mc :tabclose<CR>
-nmap <silent> <leader>mp :tabp<CR>
-nmap <silent> <leader>mh :tabm - 1<CR>
-nmap <silent> <leader>ml :tabm + 1<CR>
 
 " Helper keys
 nmap <C-a> A 
 nmap <C-x><C-t> :split<CR>:term<CR>i
 imap <C-a> <END> 
 nmap <leader>w :w<CR>
-nnoremap <leader><leader> <c-^>
-
-" Tags
-nmap <leader>l :Vista!!<CR>
+nnoremap <leader>b <c-^>
 
 " CPP Build command
 fun! BuildCPP()
@@ -97,3 +92,12 @@ fun! BuildCPP()
 endfun
 
 autocmd FileType cpp,cc,cxx,h,hpp :call BuildCPP()
+
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
+let g:floaterm_keymap_new    = '<F7>'
+let g:floaterm_keymap_prev   = '<F8>'
+let g:floaterm_keymap_next   = '<F9>'
+let g:floaterm_keymap_toggle = '<F12>'
+command! Vifm FloatermNew vifm
+map <Leader><Leader> <Plug>(easymotion-prefix)
