@@ -1,6 +1,8 @@
 call plug#begin()
-Plug 'sainnhe/gruvbox-material'
-Plug 'itchyny/lightline.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'rakr/vim-one'
+" Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -16,8 +18,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-sleuth'
 Plug 'mattn/emmet-vim'
 Plug 'yggdroot/indentline'
 Plug 'matze/vim-move'
@@ -38,10 +38,11 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'liuchengxu/vim-which-key'
 Plug 'moll/vim-bbye'
 call plug#end()
+
 " Config
 source $HOME/.config/nvim/modules/config.vim
 
-" tagbar
+" Tagbar
 source $HOME/.config/nvim/modules/tagbar.vim
 
 " COC
