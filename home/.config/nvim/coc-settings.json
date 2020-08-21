@@ -13,15 +13,10 @@
   ],
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
-  "python.linting.pylintArgs": ["--load-plugins", "pylint_django"],
+  "python.jediEnabled": true,
   "python.formatting.provider": "yapf",
   "python.pipenvPath": "pipenv",
   "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
-    },
     "ccls": {
       "command": "ccls",
       "filetypes": ["c", "cpp", "objc", "objcpp", "cc"],

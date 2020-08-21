@@ -18,9 +18,6 @@ set relativenumber
 set foldmethod=manual  
 
 " undo dir
-if !isdirectory($HOME."/.nvim/undo-dir")
-  call mkdir($HOME."/.nvim/undo-dir", "", 0700)
-endif
 set undodir=~/.nvim/undo-dir
 
 set undofile
@@ -76,12 +73,12 @@ nmap <silent> [b :bp<CR>
 nmap <silent> <leader>bd :Bdelete<CR>
 nmap <silent> [t :tabn<CR>
 nmap <silent> ]t :tabp<CR>
-nmap <silent> <leader>mc :tabclose<CR>
+nmap <silent> <leader>td :tabclose<CR>
 
 " Helper keys
 nmap <C-a> A 
 nmap <C-x><C-t> :split<CR>:term<CR>i
-imap <C-a> <END> 
+imap <C-a> <END>
 nmap <leader>w :w<CR>
 nnoremap <leader>b <c-^>
 
@@ -93,11 +90,12 @@ endfun
 
 autocmd FileType cpp,cc,cxx,h,hpp :call BuildCPP()
 
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-
 let g:floaterm_keymap_new    = '<F7>'
 let g:floaterm_keymap_prev   = '<F8>'
 let g:floaterm_keymap_next   = '<F9>'
 let g:floaterm_keymap_toggle = '<F12>'
-command! Vifm FloatermNew vifm
-map <Leader><Leader> <Plug>(easymotion-prefix)
+
+nmap <Leader><Leader> <Plug>(easymotion-prefix)
+
+" Remove :W
+command! -bang -nargs=* W :w
