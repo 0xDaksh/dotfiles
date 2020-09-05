@@ -1,15 +1,20 @@
-background_opacity: 1
+background_opacity: 0.95
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: Iosevka Nerd Font Mono
     style: Regular
-  size: 15.5
+  size: 17
   offset:
     x: 0
     y: 0
   glyph_offset:
     x: 0
     y: 0
+
+window:
+  padding:
+    x: 4
+    y: 2
 
 colors:
   primary:

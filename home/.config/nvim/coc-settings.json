@@ -28,9 +28,11 @@
       }
     }
   },
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
   "snippets.extends": {
     "cpp": ["c"],
     "javascriptreact": ["javascript"],
     "typescript": ["javascript"]
-  }
+  },
+  "snippets.ultisnips.enable": true
 }

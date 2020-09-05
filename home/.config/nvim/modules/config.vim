@@ -71,8 +71,6 @@ imap jj <Esc>
 nmap <silent> ]b :bn<CR>
 nmap <silent> [b :bp<CR>
 nmap <silent> <leader>bd :Bdelete<CR>
-nmap <silent> [t :tabn<CR>
-nmap <silent> ]t :tabp<CR>
 nmap <silent> <leader>td :tabclose<CR>
 
 " Helper keys
@@ -81,6 +79,12 @@ nmap <C-x><C-t> :split<CR>:term<CR>i
 imap <C-a> <END>
 nmap <leader>w :w<CR>
 nnoremap <leader>b <c-^>
+xnoremap < <gv
+xnoremap > >gv|
+xnoremap <Tab> >gv|
+xnoremap <S-Tab> <gv
+nnoremap > >>_
+nnoremap < <<_
 
 " CPP Build command
 fun! BuildCPP()
@@ -90,10 +94,10 @@ endfun
 
 autocmd FileType cpp,cc,cxx,h,hpp :call BuildCPP()
 
-let g:floaterm_keymap_new    = '<F7>'
-let g:floaterm_keymap_prev   = '<F8>'
-let g:floaterm_keymap_next   = '<F9>'
-let g:floaterm_keymap_toggle = '<F12>'
+let g:floaterm_keymap_new    = '<leader>t'
+let g:floaterm_keymap_prev   = '[t'
+let g:floaterm_keymap_next   = ']t'
+let g:floaterm_keymap_toggle = '<leader>tt'
 
 nmap <Leader><Leader> <Plug>(easymotion-prefix)
 

@@ -5,10 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export LC_CTYPE="en_US.UTF-8"
 export ZSH="/home/daksh/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git vi-mode zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git git-flow git-flow-completion vi-mode zsh-autosuggestions zsh-syntax-highlighting zsh-z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,3 +38,5 @@ function zle-line-init () { echoti smkx }
 function zle-line-finish () { echoti rmkx }
 zle -N zle-line-init
 zle -N zle-line-finish
+
+export PIPENV_VENV_IN_PROJECT=1

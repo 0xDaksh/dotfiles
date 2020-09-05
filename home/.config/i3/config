@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:JetBrainsMono Nerd Font 12 
+font pango:JetBrainsMono Nerd Font 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -197,7 +197,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
 bar {
     font pango:DejaVu Sans Mono, FontAwesome 12
     position top
@@ -212,3 +211,18 @@ bar {
         urgent_workspace #2f343a #900000 #ffffff
     }
 }
+
+for_window [class="^.*"] border pixel 3
+new_window 1pixel
+
+client.focused          #bf616a #2f343f #d8dee8 #bf616a #d8dee8
+client.focused_inactive #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.unfocused        #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.urgent           #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.placeholder      #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.background       #2f343f
+
+
+for_window [class="jome"] floating enable
+bindsym $mod+period exec --no-startup-id ~/.config/i3/emoji 
+

@@ -1,7 +1,7 @@
 call plug#begin()
-Plug 'ryanoasis/vim-devicons'
-Plug 'rakr/vim-one'
+Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -26,10 +26,12 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/goyo.vim'
 Plug 'mbbill/undotree'
 Plug 'sheerun/vim-polyglot'
-Plug 'puremourning/vimspector'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'moll/vim-bbye'
 call plug#end()
+
+" Config
+source $HOME/.config/nvim/modules/config.vim
 
 " COC
 source $HOME/.config/nvim/modules/coc.vim
@@ -45,7 +47,3 @@ source $HOME/.config/nvim/modules/signify.vim
 
 " Colors
 source $HOME/.config/nvim/modules/theming.vim
-
-" Config
-source $HOME/.config/nvim/modules/config.vim
-
