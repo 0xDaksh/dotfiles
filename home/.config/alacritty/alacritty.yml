@@ -1,9 +1,9 @@
-background_opacity: 0.95
+background_opacity: 0.97
 font:
   normal:
     family: Iosevka Nerd Font Mono
     style: Regular
-  size: 17
+  size: 17.5
   offset:
     x: 0
     y: 0
@@ -12,6 +12,9 @@ font:
     y: 0
 
 window:
+  dimensions:
+    columns: 120
+    lines: 30
   padding:
     x: 4
     y: 2
