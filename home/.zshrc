@@ -3,7 +3,7 @@ export ZSH="/home/daksh/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 
-plugins=(git git-flow git-flow-completion vi-mode zsh-autosuggestions zsh-syntax-highlighting zsh-z)
+plugins=(git git-flow git-flow-completion vi-mode zsh-autosuggestions zsh-syntax-highlighting zsh-z poetry)
 
 source $ZSH/oh-my-zsh.sh
 

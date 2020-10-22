@@ -16,6 +16,13 @@
   "python.jediEnabled": true,
   "python.formatting.provider": "yapf",
   "python.pipenvPath": "pipenv",
+  "python.poetryPath": "poetry",
+  "python.venvFolders": [
+    "envs",
+    ".pyenv",
+    ".direnv",
+    ".cache/pypoetry/virtualenvs"
+  ],
   "languageserver": {
     "ccls": {
       "command": "ccls",
@@ -25,6 +32,21 @@
         "cache": {
           "directory": "/tmp/ccls"
         }
+      }
+    },
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": [
+        "hie.yaml",
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml"
+      ],
+      "filetypes": ["hs", "lhs", "haskell"],
+      "initializationOptions": {
+        "haskell": {}
       }
     }
   },
