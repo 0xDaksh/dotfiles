@@ -22,11 +22,11 @@
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
-(setq doom-font (font-spec :family "Operator Mono Lig Book" :size 19)
-      doom-big-font (font-spec :family "Operator Mono Lig Book" :size 25)
+(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 22)
+      doom-big-font (font-spec :family "Iosevka Nerd Font Mono" :size 27)
       doom-variable-pitch-font (font-spec 
-                                 :family "Operator Mono Lig Book" :size 19)
-      doom-serif-font (font-spec :family "IBM Plex Mono" :weight 'light))
+                                 :family "Iosevka Nerd Font Mono" :size 22)
+      doom-serif-font (font-spec :family "Iosevka Nerd Font Mono" :weight 'light))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
